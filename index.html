@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wasch Engel - Premium Fahrzeugaufbereitung</title>
+  <meta name="description"
+    content="Wasch Engel - Luxuriöse Fahrzeugaufbereitung. Mit Liebe zum Detail und in reiner Handarbeit steigern wir durch hochwertige Aufbereitung den Wert Ihres Fahrzeuges.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <!-- SVG Filter to mathematically key out white/light-gray backgrounds from images -->
+  <svg width="0" height="0" style="position: absolute; pointer-events: none; width: 0; height: 0;">
+    <defs>
+      <filter id="chroma-key-white" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values="
+          1 0 0 0 0
+          0 1 0 0 0
+          0 0 1 0 0
+          -2.5 -2.5 -2.5 7.5 -0.1
+        "/>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Wasch <span class="logo-accent">Engel</span></div>
+      <div class="nav-links">
+        <a href="#leistungen">Exzellenz</a>
+        <a href="#partner">Partner</a>
+        <a href="#standort">Standorte</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <button class="btn btn-primary nav-btn trigger-booking">Termin anfragen</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-bg"
+      style="background-image: url('https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="particles" id="particles-js"></div>
+
+    <div class="hero-content">
+      <h2 class="hero-top-title">WASCH ENGEL SIGNATURE SERVICES</h2>
+      <h1 class="hero-title">
+        Die Kunst der <br> <span class="text-serif text-gold">Perfektion.</span>
+      </h1>
+      <p class="hero-desc">
+        Mit Liebe zum Detail und in reiner Handarbeit steigern wir durch hochwertige Aufbereitung den absoluten Wert
+        Ihres Fahrzeuges.
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-primary pulse-btn trigger-booking">
+          <span class="btn-text">Termin online anfragen</span>
+          <span class="btn-icon">→</span>
+        </button>
+        <a href="tel:+4991311239258" class="btn btn-outline-light">Telefonisch anfragen</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Trusted Partners Banner -->
+  <section class="partners-banner" id="partner">
+    <div class="partners-content">
+      <h2 class="partners-title">OFFIZIELLE PARTNER DER EXZELLENZ</h2>
+      <div class="partner-logos">
+        <div class="logo-item" style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 2.2rem;">
+          Lamborghini</div>
+        <div class="logo-item"
+          style="font-family: 'Outfit', sans-serif; font-weight: 800; letter-spacing: 4px; font-size: 1.5rem;">FERRARI
+        </div>
+        <div class="logo-item" style="font-family: 'Playfair Display', serif; font-size: 2rem; letter-spacing: 5px;">
+          BENTLEY</div>
+        <div class="logo-item"
+          style="font-family: 'Outfit', sans-serif; font-style: italic; font-weight: 600; font-size: 1.4rem;">FAI
+          Aviation Group</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Showcase Section -->
+  <section class="coatings-section" id="leistungen">
+    <div class="section-header center-header pt-80">
+      <span class="section-subtitle">UNSERE LEISTUNGEN</span>
+      <h2 class="section-title">Maßgeschneiderte <span class="text-serif text-gold">Premium Pflege</span></h2>
+    </div>
+
+    <div class="coatings-grid">
+      <!-- Automotive Card -->
+      <div class="coating-card">
+        <div class="coating-header">
+          <span class="coating-subtitle">HIGH PERFORMANCE</span>
+          <h3 class="coating-title">AUTOMOTIVE EXCELLENCE</h3>
+          <p class="coating-desc">Spiegelglatter Lack, Keramikversiegelung und eine unvergleichliche Tiefenreinigung für
+            Sportwagen und Luxuskarosserien.</p>
+        </div>
+        <div class="coating-body">
+          <div class="coating-bg-text">AUTO</div>
+          <img src="./images/automotive-2.png" alt="Automotive Detailing" class="coating-image">
+        </div>
+        <a href="./automotive.html" class="coating-link">DETAILS ENTDECKEN <span class="arrow">→</span></a>
+      </div>
+
+      <!-- Flight Services Card -->
+      <div class="coating-card">
+        <div class="coating-header">
+          <span class="coating-subtitle">BOEING SPEC</span>
+          <h3 class="coating-title">AVIATION PRESTIGE</h3>
+          <p class="coating-desc">Höchste Diskretion und Perfektion über den Wolken. Makellose Sauberkeit und
+            Premium-Catering für Privatjets.</p>
+        </div>
+        <div class="coating-body">
+          <div class="coating-bg-text">FLIGHT</div>
+          <img src="./images/flight-2.png" alt="Flight Services" class="coating-image">
+        </div>
+        <a href="./flight.html" class="coating-link">DETAILS ENTDECKEN <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Locations -->
+  <section class="locations" id="standort" style="background-color: var(--bg-dark); padding-top: 100px; padding-bottom: 120px; position: relative; overflow: hidden;">
+    <!-- Decorative Background Glow -->
+    <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(252,181,38,0.15) 0%, rgba(0,0,0,0) 70%); border-radius: 50%;"></div>
+    <div style="position: absolute; bottom: -100px; left: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0) 70%); border-radius: 50%;"></div>
+
+    <div class="locations-container" style="position: relative; z-index: 2;">
+      <div class="section-header" style="text-align:center; margin-bottom: 60px;">
+        <span class="section-subtitle" style="color: #aaa;">EXKLUSIV VOR ORT</span>
+        <h2 class="section-title" style="color: white;">Unsere <span class="text-serif text-gold">Standorte</span></h2>
+      </div>
+      <div class="locations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;">
+        
+        <!-- Location 1 (Nürnberg) -->
+        <div class="location-card" style="background: rgba(255,255,255,0.02); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.05); border-top: 2px solid var(--primary-gold); border-radius: 0; color: #ddd; text-align: left; padding: 50px 40px; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; box-shadow: 0 15px 35px rgba(0,0,0,0.2);">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
+              <span style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; letter-spacing: 4px; color: var(--primary-gold); font-weight: 600; text-transform: uppercase;">01 / MAIN HQ</span>
+              <span style="font-size: 1.5rem; color: rgba(252,181,38,0.2);">✦</span>
+            </div>
+            <h4 class="location-city" style="color: white; font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; font-weight: 400; letter-spacing: 0.5px;">Nürnberg</h4>
+            <p class="location-address" style="color: #aaa; font-family: 'Outfit', sans-serif; line-height: 1.8; font-size: 1.05rem; margin-bottom: 40px;">
+              <span style="color: var(--primary-gold); margin-right: 8px;">📍</span>Äußere Sulzbacher Str. 23<br>
+              <span style="padding-left: 24px; color: #777; font-size: 0.95rem;">90491 Nürnberg</span>
+            </p>
+          </div>
+          <button class="trigger-booking" style="width: 100%; background: transparent; border: 1px solid rgba(252, 181, 38, 0.3); color: white; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.9rem; letter-spacing: 2px; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; display: flex; justify-content: space-between; align-items: center;">
+            Termin buchen <span style="color: var(--primary-gold); font-size: 1.1rem; transition: transform 0.3s ease;">→</span>
+          </button>
+        </div>
+        
+        <!-- Location 2 (Herzogenaurach) -->
+        <div class="location-card" style="background: rgba(255,255,255,0.02); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.05); border-top: 2px solid var(--primary-gold); border-radius: 0; color: #ddd; text-align: left; padding: 50px 40px; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; box-shadow: 0 15px 35px rgba(0,0,0,0.2);">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
+              <span style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; letter-spacing: 4px; color: var(--primary-gold); font-weight: 600; text-transform: uppercase;">02 / SALON</span>
+              <span style="font-size: 1.5rem; color: rgba(252,181,38,0.2);">✦</span>
+            </div>
+            <h4 class="location-city" style="color: white; font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; font-weight: 400; letter-spacing: 0.5px;">Herzogenaurach</h4>
+            <p class="location-address" style="color: #aaa; font-family: 'Outfit', sans-serif; line-height: 1.8; font-size: 1.05rem; margin-bottom: 40px;">
+              <span style="color: var(--primary-gold); margin-right: 8px;">📍</span>Werner-Heisenberg-Straße 10<br>
+              <span style="padding-left: 24px; color: #777; font-size: 0.95rem;">91074 Herzogenaurach</span>
+            </p>
+          </div>
+          <button class="trigger-booking" style="width: 100%; background: transparent; border: 1px solid rgba(252, 181, 38, 0.3); color: white; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.9rem; letter-spacing: 2px; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; display: flex; justify-content: space-between; align-items: center;">
+            Termin buchen <span style="color: var(--primary-gold); font-size: 1.1rem; transition: transform 0.3s ease;">→</span>
+          </button>
+        </div>
+        
+        <!-- Location 3 (Alterlangen) -->
+        <div class="location-card" style="background: rgba(255,255,255,0.02); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.05); border-top: 2px solid var(--primary-gold); border-radius: 0; color: #ddd; text-align: left; padding: 50px 40px; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; box-shadow: 0 15px 35px rgba(0,0,0,0.2);">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
+              <span style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; letter-spacing: 4px; color: var(--primary-gold); font-weight: 600; text-transform: uppercase;">03 / ATELIER</span>
+              <span style="font-size: 1.5rem; color: rgba(252,181,38,0.2);">✦</span>
+            </div>
+            <h4 class="location-city" style="color: white; font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; font-weight: 400; letter-spacing: 0.5px;">Alterlangen</h4>
+            <p class="location-address" style="color: #aaa; font-family: 'Outfit', sans-serif; line-height: 1.8; font-size: 1.05rem; margin-bottom: 40px;">
+              <span style="color: var(--primary-gold); margin-right: 8px;">📍</span>St. Johann 21<br>
+              <span style="padding-left: 24px; color: #777; font-size: 0.95rem;">91056 Erlangen</span>
+            </p>
+          </div>
+          <button class="trigger-booking" style="width: 100%; background: transparent; border: 1px solid rgba(252, 181, 38, 0.3); color: white; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.9rem; letter-spacing: 2px; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; display: flex; justify-content: space-between; align-items: center;">
+            Termin buchen <span style="color: var(--primary-gold); font-size: 1.1rem; transition: transform 0.3s ease;">→</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" id="faq">
+    <div class="faq-container">
+
+      <div class="faq-header">
+        <span class="faq-eyebrow">FÜR SIE BEANTWORTET</span>
+        <h2 class="faq-title">Häufige Fragen</h2>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-icon">✦</span>
+            <span class="faq-q-text">Ist Waschengel ein zertifizierter Anbieter?</span>
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>Über mehr als <strong>10 Jahre Erfahrung</strong> verfügt unser von Kochchemie, Waxoyl AG und Ceramic Pro geschultes Fachpersonal.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-icon">✦</span>
+            <span class="faq-q-text">Wie ist mein Fahrzeug während der Aufbereitung versichert?</span>
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>Alle Fahrzeuge sind während der Abholung, Aufbereitung und Rückgabe vollständig durch eine <strong>Vollkasko Versicherung</strong> abgedeckt.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-icon">✦</span>
+            <span class="faq-q-text">Ist Waschengel auf alle Arten von Schmutz spezialisiert?</span>
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>Ja, wir sind <strong>100% auf jeglicher Arten von Verschmutzungen spezialisiert</strong> und bei uns ist alles MACHBAR.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-icon">✦</span>
+            <span class="faq-q-text">Wie lange dauert die Autoaufbereitung?</span>
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>Das hängt von der gewünschten Leistung ab. Die Bearbeitungsdauer teilen wir Ihnen spätestens bei Angebotserstellung mit. Bei unseren Paketen finden Sie eine <strong>Zeitangabe in der Übersicht</strong>.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-icon">✦</span>
+            <span class="faq-q-text">Was kostet eine Autoaufbereitung?</span>
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>Eine individuelle Beratung ist uns ein großes Anliegen. Für das optimale Angebot ziehen wir die Erstberatung per Telefon oder Mail vor. Die endgültige Abstimmung findet im Regelfall direkt mit Ihnen am Fahrzeug statt. Für eine <strong>kostenlose Besichtigung</strong> bitten wir Sie, immer einen unverbindlichen Termin mit uns zu vereinbaren. Besichtigungen können auch gerne vor Ort bei Ihnen stattfinden.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-icon">✦</span>
+            <span class="faq-q-text">Wann ist eine Autoaufbereitung sinnvoll?</span>
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>Wenn Sie den <strong>Wert Ihres Wagens erhöhen oder erhalten</strong> möchten, ist eine Autoaufbereitung für Sie sehr nützlich. Das ist speziell der Fall, wenn Sie Ihr Fahrzeug verkaufen möchten oder wenn Sie vor der Leasingrückgabe stehen. Auch bei einem Gebrauchtwagenkauf, unangenehmen Gerüchen, Kratzern und Schrammen ist eine vollständige Aufbereitung ebenfalls sinnvoll.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA & Footer -->
+  <footer class="footer" id="termin">
+    <div class="footer-cta">
+      <h2 class="footer-title">Erleben Sie den <span class="text-serif text-gold">Wasch Engel-Effekt</span></h2>
+      <p class="footer-desc">Vereinbaren Sie einen unverbindlichen Termin für Ihr Fahrzeug oder Flugzeug und lassen Sie
+        sich von unserer Arbeit begeistern.</p>
+      <button class="btn btn-primary pulse-btn btn-lg trigger-booking">
+        <span class="btn-text">Jetzt Termin anfragen</span>
+      </button>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-logo">Wasch <span class="logo-accent">Engel</span></div>
+      <div class="footer-links">
+        <a href="./impressum.html">Impressum</a>
+        <span class="divider">|</span>
+        <a href="#">Datenschutzerklärung</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Appointment Modal -->
+  <div id="booking-modal" class="modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close">&times;</button>
+
+      <div class="modal-header">
+        <p>Jetzt Fragen beantworten für Ihre <strong>unverbindliche Terminanfrage</strong></p>
+      </div>
+
+      <!-- Step 1: Location -->
+      <div class="modal-step" id="step-1" data-step="1">
+        <h3>Wo wollen Sie Ihr Auto abgeben?</h3>
+        <div class="step-content image-cards-grid">
+          <div class="image-card selectable" onclick="selectOption(this, 1)">
+            <div class="img-wrapper"><img src="./images/location-1.png" alt="Alterlangen"></div>
+            <div class="card-label">
+              <strong>Alterlangen</strong><br>St. Johann 21, Erlangen
+            </div>
+          </div>
+          <div class="image-card selectable" onclick="selectOption(this, 1)">
+            <div class="img-wrapper"><img src="./images/location-2.png" alt="Nürnberg"></div>
+            <div class="card-label">
+              <strong>Nürnberg</strong><br>Äußere Sulzbacher Str. 23
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Services -->
+      <div class="modal-step" id="step-2" data-step="2">
+        <h3>Was soll gemacht werden?</h3>
+        <p class="sub-instruction">ℹ Mehrfachauswahl möglich</p>
+        <div class="step-content list-grid">
+          <label class="list-item selectable-multi">
+            <span class="list-icon">🧼</span>
+            <span class="list-text">Innen/Außenreinigung (Hochwertige Handwäsche)</span>
+            <input type="checkbox" class="hidden-input">
+            <span class="custom-radio"></span>
+          </label>
+          <label class="list-item selectable-multi">
+            <span class="list-icon">🔫</span>
+            <span class="list-text">Lackierarbeiten (Kratzer, Polster, Unfallschäden,..)</span>
+            <input type="checkbox" class="hidden-input">
+            <span class="custom-radio"></span>
+          </label>
+          <label class="list-item selectable-multi">
+            <span class="list-icon">✨</span>
+            <span class="list-text">Versiegelungen (Nano, Keramik,..)</span>
+            <input type="checkbox" class="hidden-input">
+            <span class="custom-radio"></span>
+          </label>
+          <label class="list-item selectable-multi">
+            <span class="list-icon">🧽</span>
+            <span class="list-text">Sonderreinigungen (Schimmel, Tierhaare, Geruch,..)</span>
+            <input type="checkbox" class="hidden-input">
+            <span class="custom-radio"></span>
+          </label>
+        </div>
+        <button class="btn-dark-full mt-4" onclick="nextStep()">Nächster Schritt &rsaquo;</button>
+      </div>
+
+      <!-- Step 3: Vehicle Category -->
+      <div class="modal-step" id="step-3" data-step="3">
+        <h3>Welche Kategorie trifft auf Ihr Fahrzeug zu?</h3>
+        <div class="step-content icon-grid">
+          <div class="icon-card selectable" onclick="selectOption(this, 3)"><span>🚗</span> PKW</div>
+          <div class="icon-card selectable" onclick="selectOption(this, 3)"><span>🚙</span> SUV</div>
+          <div class="icon-card selectable" onclick="selectOption(this, 3)"><span>🏎️</span> Sportwagen</div>
+          <div class="icon-card selectable" onclick="selectOption(this, 3)"><span>🚐</span> Van/Transporter</div>
+          <div class="icon-card selectable" onclick="selectOption(this, 3)"><span>🏍️</span> Motorrad</div>
+          <div class="icon-card selectable" onclick="selectOption(this, 3)"><span>🚐</span> Sonstiges</div>
+        </div>
+      </div>
+
+      <!-- Step 4: Reason -->
+      <div class="modal-step" id="step-4" data-step="4">
+        <h3>Was ist der Grund für die Aufbereitung?</h3>
+        <div class="step-content icon-grid-2">
+          <div class="icon-card selectable" onclick="selectOption(this, 4)"><span>📄</span> Kostenersparnis für
+            Leasing-Rückgabe</div>
+          <div class="icon-card selectable" onclick="selectOption(this, 4)"><span>📈</span> Wertsteigerung für Verkauf
+          </div>
+          <div class="icon-card selectable" onclick="selectOption(this, 4)"><span>💆</span> Wohlbefinden und Werterhalt
+          </div>
+          <div class="icon-card selectable" onclick="selectOption(this, 4)"><span>❓</span> Sonstiges</div>
+        </div>
+      </div>
+
+      <!-- Step 5: Details -->
+      <div class="modal-step" id="step-5" data-step="5">
+        <h3>An welchem Tag sollen wir Ihr Auto aufbereiten?</h3>
+        <div class="step-content form-content">
+          <input type="date" class="date-input" id="input-date" placeholder="yyyy-mm-dd">
+          <p class="small-text mt-2">Sie erhalten die finale Terminbestätigung von uns im Anschluss.</p>
+
+          <h4 class="mt-4">Kennzeichen (optional)</h4>
+          <input type="text" class="text-input" id="input-license" placeholder="z.B ER K ...">
+
+          <div class="btn-group mt-4">
+            <button class="btn-primary-outline" onclick="prevStep()">Zurück</button>
+            <button class="btn-primary-full" onclick="nextStep()">Weiter</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 6: Personal Info -->
+      <div class="modal-step" id="step-6" data-step="6">
+        <div class="step-content form-content">
+          <label class="input-label">Anrede</label>
+          <select class="text-input select-input" id="input-salutation">
+            <option value="" disabled selected>bitte auswählen...</option>
+            <option value="Herr">Herr</option>
+            <option value="Frau">Frau</option>
+            <option value="Divers">Divers</option>
+          </select>
+
+          <label class="input-label mt-4">Vorname</label>
+          <input type="text" class="text-input" id="input-firstname" placeholder="Ihr Vorname...">
+
+          <label class="input-label mt-4">Nachname</label>
+          <input type="text" class="text-input" id="input-lastname" placeholder="Ihr Nachname...">
+
+          <div class="btn-group mt-4">
+            <button class="btn-primary-outline" onclick="prevStep()">Zurück</button>
+            <button class="btn-primary-full" onclick="nextStep()">Weiter</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 7: Contact Info -->
+      <div class="modal-step" id="step-7" data-step="7">
+        <div class="step-content form-content">
+          <label class="input-label">Handynummer (Für Rückfragen bei der Terminvereinbarung)</label>
+          <div class="phone-input-group">
+            <select class="text-input select-input phone-prefix" id="input-phone-code">
+              <option value="+49">DE +49</option>
+              <option value="+43">AT +43</option>
+              <option value="+41">CH +41</option>
+            </select>
+            <input type="tel" class="text-input" id="input-phone" placeholder="z.B. 0176 1234 567">
+          </div>
+
+          <label class="input-label mt-4">E-Mail (für die Terminbestätigung)</label>
+          <input type="email" class="text-input" id="input-email" placeholder="Ihre E-Mail-Adresse...">
+
+          <p class="small-text mt-4">Wir verwenden Ihre Daten ausschließlich gemäß unserer <a href="#"
+              style="color: var(--primary-gold);">Datenschutzerklärung</a>.</p>
+
+          <div class="btn-group mt-4">
+            <button class="btn-primary-outline" onclick="prevStep()">Zurück</button>
+            <button class="btn-primary-full" onclick="submitForm()">Absenden</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-bar" id="progress-bar">
+          <span id="progress-text">20%</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // FAQ Accordion Toggle
+    window.toggleFaq = function(btn) {
+      var item = btn.parentElement;
+      var isOpen = item.classList.contains('open');
+
+      // Close all open items first
+      var allItems = document.querySelectorAll('.faq-item');
+      for (var i = 0; i < allItems.length; i++) {
+        allItems[i].classList.remove('open');
+      }
+
+      // If this item was closed, open it
+      if (!isOpen) {
+        item.classList.add('open');
+      }
+    };
+
+    // Pure ES5 Standalone Fallback Modal Logic for direct file:// protocol support (no modern ES6/ES8 syntax to avoid any browser parse failures)
+    (function() {
+      var modal = document.getElementById('booking-modal');
+      if (!modal) return;
+
+      var currentStep = 1;
+      var totalSteps = 7;
+
+      window.openModal = function(e) {
+        if (e) e.preventDefault();
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        currentStep = 1;
+        showStep(currentStep);
+      };
+
+      window.closeModal = function() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      };
+
+      window.nextStep = function() {
+        if (currentStep < totalSteps) {
+          currentStep++;
+          showStep(currentStep);
+        }
+      };
+
+      window.prevStep = function() {
+        if (currentStep > 1) {
+          currentStep--;
+          showStep(currentStep);
+        }
+      };
+
+      window.selectOption = function(element, step) {
+        var siblings = element.parentElement.querySelectorAll('.selectable');
+        for (var i = 0; i < siblings.length; i++) {
+          siblings[i].classList.remove('selected');
+        }
+        element.classList.add('selected');
+        setTimeout(function() {
+          window.nextStep();
+        }, 400);
+      };
+
+      function showStep(stepIndex) {
+        var steps = document.querySelectorAll('.modal-step');
+        for (var i = 0; i < steps.length; i++) {
+          steps[i].classList.remove('active');
+        }
+        var activeStep = document.getElementById('step-' + stepIndex);
+        if (activeStep) activeStep.classList.add('active');
+
+        // Update progress
+        var percentage = Math.round((stepIndex / totalSteps) * 100);
+        var progressBar = document.getElementById('progress-bar');
+        var progressText = document.getElementById('progress-text');
+        if (progressBar) progressBar.style.width = percentage + '%';
+        if (progressText) progressText.textContent = percentage + '%';
+      }
+
+      window.submitForm = function() {
+        var selectedLocationEl = document.querySelector('#step-1 .selectable.selected');
+        var location = selectedLocationEl ? selectedLocationEl.innerText.replace(/\n/g, ', ').trim() : '';
+
+        var checkedServices = [];
+        var inputs = document.querySelectorAll('#step-2 .hidden-input');
+        for (var i = 0; i < inputs.length; i++) {
+          if (inputs[i].checked) {
+            var textEl = inputs[i].parentElement.querySelector('.list-text');
+            if (textEl) checkedServices.push(textEl.innerText);
+          }
+        }
+        var services = checkedServices.join(', ');
+
+        var selectedVehicleEl = document.querySelector('#step-3 .selectable.selected');
+        var vehicle = selectedVehicleEl ? selectedVehicleEl.innerText.trim() : '';
+
+        var selectedReasonEl = document.querySelector('#step-4 .selectable.selected');
+        var reason = selectedReasonEl ? selectedReasonEl.innerText.trim() : '';
+
+        var dateEl = document.getElementById('input-date');
+        var date = dateEl ? dateEl.value : '';
+
+        var licenseEl = document.getElementById('input-license');
+        var license_plate = licenseEl ? licenseEl.value : '';
+
+        var salutationEl = document.getElementById('input-salutation');
+        var salutation = salutationEl ? salutationEl.value : '';
+
+        var firstnameEl = document.getElementById('input-firstname');
+        var first_name = firstnameEl ? firstnameEl.value : '';
+
+        var lastnameEl = document.getElementById('input-lastname');
+        var last_name = lastnameEl ? lastnameEl.value : '';
+
+        var prefixEl = document.getElementById('input-phone-code');
+        var prefix = prefixEl ? prefixEl.value : '';
+
+        var phoneEl = document.getElementById('input-phone');
+        var phone_num = phoneEl ? phoneEl.value : '';
+
+        var emailEl = document.getElementById('input-email');
+        var email = emailEl ? emailEl.value : '';
+
+        var data = {
+          location: location,
+          services: services,
+          vehicle: vehicle,
+          reason: reason,
+          date: date,
+          license_plate: license_plate,
+          salutation: salutation,
+          first_name: first_name,
+          last_name: last_name,
+          phone: prefix + ' ' + phone_num,
+          email: email
+        };
+
+        console.log('Form Submit (Direct File mode):', data);
+        alert('Ihre Anfrage wurde erfolgreich gesendet! Wir melden uns in Kürze.');
+        window.closeModal();
+      };
+
+      // Delegation for click events
+      document.addEventListener('click', function(e) {
+        var trigger = e.target.closest('.trigger-booking');
+        if (trigger) {
+          window.openModal(e);
+        }
+        var closeBtn = e.target.closest('.modal-close');
+        if (closeBtn) {
+          window.closeModal();
+        }
+        if (e.target === modal) {
+          window.closeModal();
+        }
+      });
+    })();
+  </script>
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
