@@ -143,16 +143,16 @@ if (document.querySelector('.flyer-section')) {
 
 // Our Services Grid Reveal
 const serviceGridItems = gsap.utils.toArray('.service-grid-item');
-if (serviceGridItems.length > 0 && document.querySelector('.services-grid-layout')) {
+if (serviceGridItems.length > 0 && document.querySelector('#services-grid')) {
   gsap.from(serviceGridItems, {
-    y: 50,
+    y: 40,
     opacity: 0,
-    duration: 1.1,
+    duration: 1.0,
     stagger: 0.08,
     ease: 'power3.out',
     scrollTrigger: {
-      trigger: '.services-grid-layout',
-      start: 'top 80%'
+      trigger: '#services-grid',
+      start: 'top 90%'
     }
   });
 }
@@ -317,3 +317,10 @@ if (modalOverlay) {
     if (e.target === modalOverlay) closeModal();
   });
 }
+
+// Refresh GSAP ScrollTrigger once the page is fully loaded to prevent height/scroll position misalignment with Lenis
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    ScrollTrigger.refresh();
+  }, 250);
+});
