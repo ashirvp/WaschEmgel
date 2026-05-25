@@ -145,14 +145,14 @@ if (document.querySelector('.flyer-section')) {
 const serviceGridItems = gsap.utils.toArray('.service-grid-item');
 if (serviceGridItems.length > 0 && document.querySelector('#services-grid')) {
   gsap.from(serviceGridItems, {
-    y: 40,
+    y: 25,
     opacity: 0,
-    duration: 1.0,
-    stagger: 0.08,
-    ease: 'power3.out',
+    duration: 0.55,
+    stagger: 0.04,
+    ease: 'power2.out',
     scrollTrigger: {
       trigger: '#services-grid',
-      start: 'top 90%'
+      start: 'top 92%'
     }
   });
 }
