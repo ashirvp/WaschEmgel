@@ -115,6 +115,48 @@ if (locations.length > 0 && document.querySelector('.locations-grid')) {
   });
 }
 
+// Flyer Section Reveal
+if (document.querySelector('.flyer-section')) {
+  gsap.from('.flyer-content > *', {
+    y: 40,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.flyer-section',
+      start: 'top 80%'
+    }
+  });
+
+  gsap.from('.flyer-media-col', {
+    y: 60,
+    opacity: 0,
+    duration: 1.2,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.flyer-section',
+      start: 'top 75%'
+    }
+  });
+}
+
+// Our Services Grid Reveal
+const serviceGridItems = gsap.utils.toArray('.service-grid-item');
+if (serviceGridItems.length > 0 && document.querySelector('.services-grid-layout')) {
+  gsap.from(serviceGridItems, {
+    y: 50,
+    opacity: 0,
+    duration: 1.1,
+    stagger: 0.08,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.services-grid-layout',
+      start: 'top 80%'
+    }
+  });
+}
+
 // Navbar Blur Effect on Scroll
 const navbar = document.querySelector('.navbar');
 if (navbar) {
