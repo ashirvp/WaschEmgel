@@ -141,20 +141,23 @@ if (document.querySelector('.flyer-section')) {
   });
 }
 
-// Our Services Grid Reveal
-const serviceGridItems = gsap.utils.toArray('.service-grid-item');
-if (serviceGridItems.length > 0 && document.querySelector('#services-grid')) {
-  gsap.from(serviceGridItems, {
-    y: 25,
-    opacity: 0,
-    duration: 0.55,
-    stagger: 0.04,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: '#services-grid',
-      start: 'top 92%'
-    }
+// Our Services Grid Reveal (IntersectionObserver for absolute robustness on Vercel)
+const servicesSection = document.querySelector('#services-grid');
+const serviceGridItems = document.querySelectorAll('.service-grid-item');
+if (servicesSection && serviceGridItems.length > 0) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        serviceGridItems.forEach((item) => {
+          item.classList.add('revealed');
+        });
+        observer.unobserve(servicesSection); // stop observing once triggered
+      }
+    });
+  }, {
+    rootMargin: '0px 0px -10% 0px' // triggers slightly before it enters the viewport fully
   });
+  observer.observe(servicesSection);
 }
 
 // Navbar Blur Effect on Scroll
