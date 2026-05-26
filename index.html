@@ -805,6 +805,14 @@
           window.closeModal();
         }
       });
+
+      // Local file:// protocol support fallback (Chrome blocks ES modules when running locally without a server, causing main.js to not run)
+      if (window.location.protocol === 'file:') {
+        var items = document.querySelectorAll('.service-grid-item');
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.add('revealed');
+        }
+      }
     })();
   </script>
   <script type="module" src="./main.js"></script>
