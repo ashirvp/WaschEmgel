@@ -10,13 +10,18 @@ gsap.registerPlugin(ScrollTrigger);
 const lenis = new Lenis({
   duration: 1.5,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  smoothWheel: true, // correct stable v1.0+ parameter
+  smooth: true,
   smoothTouch: false,
 });
 
 lenis.on('scroll', ScrollTrigger.update);
 
-// Hook up all anchor links starting with "#" for beautiful Lenis smooth scrolling
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
+gsap.ticker.lagSmoothing(0);
+
+// Smooth Scroll to internal anchors when navbar links are clicked
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     const targetId = this.getAttribute('href');
@@ -25,23 +30,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
       e.preventDefault();
-      
-      // Calculate navbar height offset to avoid overlapping sections
-      const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 80;
-      
       lenis.scrollTo(targetElement, {
-        offset: -navbarHeight,
-        duration: 1.6,
+        offset: -85, // Accounts for sticky navbar height
+        duration: 1.4,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
       });
     }
   });
 });
 
-gsap.ticker.add((time) => {
-  lenis.raf(time * 1000);
-});
-gsap.ticker.lagSmoothing(0);
+// Smooth Scroll on landing if a hash exists in the URL (coming from details pages)
+if (window.location.hash) {
+  const targetId = window.location.hash;
+  const targetElement = document.querySelector(targetId);
+  if (targetElement) {
+    setTimeout(() => {
+      lenis.scrollTo(targetElement, {
+        offset: -85,
+        duration: 1.6,
+        immediate: false
+      });
+    }, 450); // Gives time for assets to stabilize before gliding
+  }
+}
 
 // Hero Section Parallax Effect
 if (document.querySelector('.hero') && document.querySelector('.hero-bg')) {
