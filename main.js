@@ -103,14 +103,26 @@ if (document.querySelector('.hero-actions')) {
 const showcaseCards = gsap.utils.toArray('.coating-card');
 if (showcaseCards.length > 0) {
   showcaseCards.forEach((card, i) => {
+    // Progressive enhancement: only hide elements if GSAP actually runs
+    gsap.set(card, { opacity: 0, y: 40 });
+    
+    // Dynamic delay based on responsive columns: 3 on desktop, 2 on tablet, 1 on mobile
+    let delayVal = 0;
+    if (window.innerWidth > 1024) {
+      delayVal = (i % 3) * 0.15;
+    } else if (window.innerWidth > 768) {
+      delayVal = (i % 2) * 0.15;
+    }
+    
     gsap.to(card, {
       y: 0,
       opacity: 1,
-      duration: 1.5,
+      duration: 1.2,
+      delay: delayVal,
       ease: 'power4.out',
       scrollTrigger: {
         trigger: card,
-        start: 'top 85%',
+        start: 'top 88%',
         toggleActions: 'play none none reverse'
       }
     });

@@ -23,23 +23,6 @@ html {
   scroll-behavior: initial;
 }
 
-/* Lenis Smooth Scroll Resets */
-html.lenis, html.lenis body {
-  height: auto;
-}
-
-.lenis-smooth {
-  scroll-behavior: auto !important;
-}
-
-.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-
-.lenis-stopped {
-  overflow: hidden;
-}
-
 body {
   font-family: 'Outfit', sans-serif;
   background-color: var(--bg-white);
@@ -385,35 +368,36 @@ h1, h2, h3, h4 {
 
 .coatings-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* 3 Columns on desktop */
   max-width: 1400px;
   margin: 0 auto;
-  gap: 50px;
+  gap: 30px;
   padding: 0 20px;
   position: relative;
   z-index: 2;
 }
 
 .coating-card {
-  padding: 70px 55px;
+  padding: 45px 35px; /* Compact padding for elegant card sizes */
   position: relative;
   display: flex;
   flex-direction: column;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
-  border: 1px solid rgba(252, 181, 38, 0.15);
-  border-top: 4px solid var(--primary-gold);
+  border: 1px solid rgba(252, 181, 38, 0.12);
+  border-top: 4px solid var(--primary-gold); /* Prominent gold top border */
   border-radius: 0px;
+  min-height: 580px;
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.02), 0 5px 15px rgba(0, 0, 0, 0.01);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.02);
 }
 
 .coating-card:hover {
   transform: translateY(-10px);
   background: rgba(255, 255, 255, 0.98);
   border-color: rgba(252, 181, 38, 0.45);
-  box-shadow: 0 35px 70px rgba(252, 181, 38, 0.07), 0 15px 30px rgba(0, 0, 0, 0.015);
+  box-shadow: 0 30px 60px rgba(252, 181, 38, 0.07), 0 15px 30px rgba(0, 0, 0, 0.015);
 }
 
 .coating-header {
@@ -423,29 +407,29 @@ h1, h2, h3, h4 {
 
 .coating-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2.3rem;
+  font-size: 1.8rem; /* Smaller elegant headings */
   font-weight: 600;
-  margin-top: 15px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
   color: var(--text-dark);
   letter-spacing: 0.5px;
 }
 
 .coating-desc {
   color: #666;
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 1.02rem;
+  line-height: 1.7;
   max-width: 440px;
   font-weight: 400;
 }
 
 .coating-body {
   position: relative;
-  height: 380px;
+  height: 220px; /* Smaller image display area */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 30px 0;
+  margin: 15px 0;
 }
 
 /* Sleek Outline Text Effect with golden aura */
@@ -760,13 +744,14 @@ h1, h2, h3, h4 {
 
 @media (max-width: 1024px) {
   .coatings-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr); /* 2x3 on tablet */
     margin: 0 20px;
+    gap: 25px;
   }
   .coating-card {
     border-right: none;
     border-bottom: 1px solid rgba(0,0,0,0.05);
-    padding: 60px 40px;
+    padding: 40px 30px;
   }
   .locations-grid {
     grid-template-columns: 1fr;
@@ -788,6 +773,9 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 768px) {
+  .coatings-grid {
+    grid-template-columns: 1fr; /* 1x6 on mobile */
+  }
   .nav-links, .navbar .nav-btn {
     display: none;
   }

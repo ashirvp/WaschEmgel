@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wasch Engel - Lackschutzfolie (PPF)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="./index.html" class="logo" style="text-decoration:none; display:flex; align-items:center;">
+          <img src="./images/my%20logo.png" alt="WaschEngel Logo" style="height: 48px; width: auto; display: block;">
+        </a>
+        <div class="nav-links">
+          <a href="./index.html#leistungen">Exzellenz</a>
+          <a href="./index.html#services-grid">Services</a>
+          <a href="./index.html#flyer-pdf">Flyer</a>
+          <a href="./index.html#standort">Standorte</a>
+        </div>
+        <button class="btn btn-primary nav-btn trigger-booking">Termin anfragen</button>
+      </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="hero" style="justify-content: flex-start; min-height: 80vh;">
+      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1611245781440-6211831c261e?auto=format&fit=crop&w=2070&q=80'); opacity: 0.25;"></div>
+      <div class="hero-overlay" style="background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.3) 100%);"></div>
+      
+      <div class="hero-content" style="text-align: left; max-width: 800px; margin-left: 5%; margin-top: 15vh; z-index: 2;">
+        <h2 class="hero-top-title" style="letter-spacing: 6px; color: var(--primary-gold); font-weight: 700;">SHIELD & GUARD</h2>
+        <h1 class="hero-title" style="font-size: 4.5rem; color: var(--text-dark); text-shadow: none;">Lackschutzfolie<br><span class="text-serif text-gold">(PPF).</span></h1>
+        <p class="hero-desc" style="margin-left: 0; max-width: 600px; font-size: 1.2rem; line-height: 1.8; color: #555;">
+          Der unsichtbare Schutzpanzer für Ihren Lack. Unsere extrem widerstandsfähigen, selbstheilenden Lackschutzfolien (PPF) schützen Ihr Fahrzeug dauerhaft vor Steinschlägen und Mikrokratzern.
+        </p>
+        <div class="hero-actions" style="justify-content: flex-start; margin-top: 40px;">
+          <button class="btn btn-primary pulse-btn trigger-booking">
+            <span class="btn-text">Jetzt Termin anfragen</span>
+            <span class="btn-icon">→</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Services Detail Section -->
+    <section class="locations" style="background-color: #FAFAFA; padding-top: 120px; padding-bottom: 140px; position: relative; overflow: hidden;">
+      <!-- Decorative Background Glows -->
+      <div style="position: absolute; top: -100px; right: -100px; width: 450px; height: 450px; background: radial-gradient(circle, rgba(252,181,38,0.08) 0%, rgba(0,0,0,0) 70%); border-radius: 50%;"></div>
+      <div style="position: absolute; bottom: -100px; left: -100px; width: 550px; height: 550px; background: radial-gradient(circle, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0) 70%); border-radius: 50%;"></div>
+      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 900px; height: 900px; background: radial-gradient(circle, rgba(252,181,38,0.04) 0%, rgba(0,0,0,0) 70%); border-radius: 50%; pointer-events: none; z-index: 1;"></div>
+
+      <div class="locations-container" style="position: relative; z-index: 2;">
+        <div class="section-header" style="text-align:center; margin-bottom: 60px;">
+          <span class="section-subtitle" style="color: var(--primary-gold); font-weight: 700;">UNSERE SERVICES IM DETAIL</span>
+          <h2 class="section-title" style="color: var(--text-dark);">Bespoke <span class="text-serif text-gold">Pakete</span></h2>
+        </div>
+        
+        <div class="services-details-grid">
+          <!-- Card 1 -->
+          <div class="location-card" style="background: rgba(255,255,255,0.85); backdrop-filter: blur(20px); border: 1px solid rgba(252,181,38,0.12); border-top: 4px solid var(--primary-gold); border-radius: 0; color: var(--text-dark); text-align: left; padding: 45px 35px; transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, background-color 0.4s ease, border-color 0.4s ease; display: flex; flex-direction: column; justify-content: flex-start; min-height: 380px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+              <span class="service-number" style="margin-bottom: 0;">01</span>
+              <span class="service-badge">01 / FRONT SHIELD</span>
+            </div>
+            <div class="service-divider"></div>
+            <h4 class="location-city" style="color: var(--text-dark); font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-bottom: 15px; font-weight: 500; letter-spacing: 0.5px;">Frontschürzen-Schutz</h4>
+            <p class="location-address" style="color: #555; line-height: 1.7; font-size: 1rem; margin-bottom: 0;">Maßgeschneiderter Schutz für die am stärksten gefährdeten Zonen wie vordere Stoßstange und Scheinwerfer vor lästigen Steinschlägen.</p>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="location-card" style="background: rgba(255,255,255,0.85); backdrop-filter: blur(20px); border: 1px solid rgba(252,181,38,0.12); border-top: 4px solid var(--primary-gold); border-radius: 0; color: var(--text-dark); text-align: left; padding: 45px 35px; transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, background-color 0.4s ease, border-color 0.4s ease; display: flex; flex-direction: column; justify-content: flex-start; min-height: 380px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+              <span class="service-number" style="margin-bottom: 0;">02</span>
+              <span class="service-badge">02 / FULL FRONT</span>
+            </div>
+            <div class="service-divider"></div>
+            <h4 class="location-city" style="color: var(--text-dark); font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-bottom: 15px; font-weight: 500; letter-spacing: 0.5px;">Full Front Paket</h4>
+            <p class="location-address" style="color: #555; line-height: 1.7; font-size: 1rem; margin-bottom: 0;">Umfassende Folierung der gesamten Frontpartie, inklusive Stoßstange, kompletter Motorhaube, Kotflügeln und Außenspiegeln.</p>
+          </div>
+          
+          <!-- Card 3 -->
+          <div class="location-card" style="background: rgba(255,255,255,0.85); backdrop-filter: blur(20px); border: 1px solid rgba(252,181,38,0.12); border-top: 4px solid var(--primary-gold); border-radius: 0; color: var(--text-dark); text-align: left; padding: 45px 35px; transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, background-color 0.4s ease, border-color 0.4s ease; display: flex; flex-direction: column; justify-content: flex-start; min-height: 380px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+              <span class="service-number" style="margin-bottom: 0;">03</span>
+              <span class="service-badge">03 / TRACK PACK</span>
+            </div>
+            <div class="service-divider"></div>
+            <h4 class="location-city" style="color: var(--text-dark); font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-bottom: 15px; font-weight: 500; letter-spacing: 0.5px;">Track Pack / Performance</h4>
+            <p class="location-address" style="color: #555; line-height: 1.7; font-size: 1rem; margin-bottom: 0;">Optimaler Schutz für Sportwagen, bestehend aus dem Full Front Paket plus Schwellerbereich, A-Säulen und dem vorderen Dachbereich.</p>
+          </div>
+          
+          <!-- Card 4 -->
+          <div class="location-card" style="background: rgba(255,255,255,0.85); backdrop-filter: blur(20px); border: 1px solid rgba(252,181,38,0.12); border-top: 4px solid var(--primary-gold); border-radius: 0; color: var(--text-dark); text-align: left; padding: 45px 35px; transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, background-color 0.4s ease, border-color 0.4s ease; display: flex; flex-direction: column; justify-content: flex-start; min-height: 380px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+              <span class="service-number" style="margin-bottom: 0;">04</span>
+              <span class="service-badge">04 / COMPLETE BODY</span>
+            </div>
+            <div class="service-divider"></div>
+            <h4 class="location-city" style="color: var(--text-dark); font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-bottom: 15px; font-weight: 500; letter-spacing: 0.5px;">Complete Car Wrap</h4>
+            <p class="location-address" style="color: #555; line-height: 1.7; font-size: 1rem; margin-bottom: 0;">Die absolute High-End-Vollfolierung des gesamten Fahrzeugs für lückenlosen Rundumschutz und maximale Werterhaltung Ihres Automobils.</p>
+          </div>
+          
+          <!-- Card 5 -->
+          <div class="location-card" style="background: rgba(255,255,255,0.85); backdrop-filter: blur(20px); border: 1px solid rgba(252,181,38,0.12); border-top: 4px solid var(--primary-gold); border-radius: 0; color: var(--text-dark); text-align: left; padding: 45px 35px; transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, background-color 0.4s ease, border-color 0.4s ease; display: flex; flex-direction: column; justify-content: flex-start; min-height: 380px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+              <span class="service-number" style="margin-bottom: 0;">05</span>
+              <span class="service-badge">05 / SATIN / MATT</span>
+            </div>
+            <div class="service-divider"></div>
+            <h4 class="location-city" style="color: var(--text-dark); font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-bottom: 15px; font-weight: 500; letter-spacing: 0.5px;">Satin / Matte Transformation</h4>
+            <p class="location-address" style="color: #555; line-height: 1.7; font-size: 1rem; margin-bottom: 0;">Aufbringen einer seidenmatten Schutzfolie, die die Lackfarbe schützt und gleichzeitig in ein edles, sportliches Matt-Finish verwandelt.</p>
+          </div>
+          
+          <!-- Card 6 -->
+          <div class="location-card" style="background: rgba(255,255,255,0.85); backdrop-filter: blur(20px); border: 1px solid rgba(252,181,38,0.12); border-top: 4px solid var(--primary-gold); border-radius: 0; color: var(--text-dark); text-align: left; padding: 45px 35px; transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, background-color 0.4s ease, border-color 0.4s ease; display: flex; flex-direction: column; justify-content: flex-start; min-height: 380px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+              <span class="service-number" style="margin-bottom: 0;">06</span>
+              <span class="service-badge">06 / ENTRY GUARD</span>
+            </div>
+            <div class="service-divider"></div>
+            <h4 class="location-city" style="color: var(--text-dark); font-family: 'Playfair Display', serif; font-size: 1.7rem; margin-bottom: 15px; font-weight: 500; letter-spacing: 0.5px;">Einstiegs- & Ladekantenschutz</h4>
+            <p class="location-address" style="color: #555; line-height: 1.7; font-size: 1rem; margin-bottom: 0;">Gezielter Schutz der stark beanspruchten Einstiegsbereiche und der Ladekante des Kofferraums vor Kratzern durch Gepäck.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="padding: 60px 40px;">
+      <div class="footer-bottom" style="margin-top:0; border-top: none;">
+        <div class="footer-logo">Wasch <span class="logo-accent">Engel</span></div>
+        <div class="footer-links">
+          <a href="./impressum.html">Impressum</a>
+          <span class="divider">|</span>
+          <a href="#">Datenschutz</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive Appointment Modal -->
+    <div id="booking-modal" class="modal-overlay">
+      <div class="modal-container">
+        <button class="modal-close">&times;</button>
+        <div class="modal-header">
+          <p>Jetzt Fragen beantworten für Ihre <strong>unverbindliche Terminanfrage</strong></p>
+        </div>
+        <div class="modal-step" id="step-1" data-step="1">
+          <h3>Wo wollen Sie Ihr Auto abgeben?</h3>
+          <div class="step-content image-cards-grid">
+            <div class="image-card selectable" onclick="selectOption(this, 1)">
+              <div class="img-wrapper"><img src="./images/location-1.png" alt="Alterlangen"></div>
+              <div class="card-label"><strong>Alterlangen</strong><br>St. Johann 21, Erlangen</div>
+            </div>
+            <div class="image-card selectable" onclick="selectOption(this, 1)">
+              <div class="img-wrapper"><img src="./images/location-2.png" alt="Nürnberg"></div>
+              <div class="card-label"><strong>Nürnberg</strong><br>Äußere Sulzbacher Str. 23</div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-step" id="step-2" data-step="2">
+          <h3>Was soll gemacht werden?</h3>
+          <p class="sub-instruction">ℹ Mehrfachauswahl möglich</p>
+          <div class="step-content list-grid">
+            <label class="list-item selectable-multi">
+              <span class="list-icon">🧼</span><span class="list-text">Innen/Außenreinigung</span>
+              <input type="checkbox" class="hidden-input"><span class="custom-radio"></span>
+            </label>
+            <label class="list-item selectable-multi">
+              <span class="list-icon">🔫</span><span class="list-text">Lackierarbeiten</span>
+              <input type="checkbox" class="hidden-input"><span class="custom-radio"></span>
+            </label>
+            <label class="list-item selectable-multi">
+              <span class="list-icon">✨</span><span class="list-text">Versiegelungen</span>
+              <input type="checkbox" class="hidden-input"><span class="custom-radio"></span>
+            </label>
+            <label class="list-item selectable-multi">
+              <span class="list-icon">🧽</span><span class="list-text">Sonderreinigungen</span>
+              <input type="checkbox" class="hidden-input"><span class="custom-radio"></span>
+            </label>
+          </div>
+          <button class="btn-dark-full mt-4" onclick="nextStep()">Nächster Schritt &rsaquo;</button>
+        </div>
+        <div class="modal-step" id="step-3" data-step="3">
+          <h3>Welche Kategorie trifft auf Ihr Fahrzeug zu?</h3>
+          <div class="step-content icon-grid">
+            <div class="icon-card selectable" onclick="selectOption(this, 3)"><span>🚗</span> PKW</div>
+            <div class="icon-card selectable" onclick="selectOption(this, 3)"><span>🚙</span> SUV</div>
+            <div class="icon-card selectable" onclick="selectOption(this, 3)"><span>🏎️</span> Sportwagen</div>
+            <div class="icon-card selectable" onclick="selectOption(this, 3)"><span>🚐</span> Van/Transporter</div>
+            <div class="icon-card selectable" onclick="selectOption(this, 3)"><span>🏍️</span> Motorrad</div>
+            <div class="icon-card selectable" onclick="selectOption(this, 3)"><span>🚐</span> Sonstiges</div>
+          </div>
+        </div>
+        <div class="modal-step" id="step-4" data-step="4">
+          <h3>Was ist der Grund für die Aufbereitung?</h3>
+          <div class="step-content icon-grid-2">
+            <div class="icon-card selectable" onclick="selectOption(this, 4)"><span>📄</span> Leasing-Rückgabe</div>
+            <div class="icon-card selectable" onclick="selectOption(this, 4)"><span>📈</span> Wertsteigerung</div>
+            <div class="icon-card selectable" onclick="selectOption(this, 4)"><span>💆</span> Werterhalt</div>
+            <div class="icon-card selectable" onclick="selectOption(this, 4)"><span>❓</span> Sonstiges</div>
+          </div>
+        </div>
+        <div class="modal-step" id="step-5" data-step="5">
+          <h3>An welchem Tag sollen wir Ihr Auto aufbereiten?</h3>
+          <div class="step-content form-content">
+            <input type="date" class="date-input" id="input-date">
+            <p class="small-text mt-2">Sie erhalten die finale Terminbestätigung im Anschluss.</p>
+            <h4 class="mt-4">Kennzeichen (optional)</h4>
+            <input type="text" class="text-input" id="input-license" placeholder="z.B ER K ...">
+            <div class="btn-group mt-4">
+              <button class="btn-primary-outline" onclick="prevStep()">Zurück</button>
+              <button class="btn-primary-full" onclick="nextStep()">Weiter</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-step" id="step-6" data-step="6">
+          <div class="step-content form-content">
+            <label class="input-label">Anrede</label>
+            <select class="text-input select-input" id="input-salutation">
+              <option value="" disabled selected>bitte auswählen...</option>
+              <option value="Herr">Herr</option><option value="Frau">Frau</option><option value="Divers">Divers</option>
+            </select>
+            <label class="input-label mt-4">Vorname</label><input type="text" class="text-input" id="input-firstname" placeholder="Ihr Vorname...">
+            <label class="input-label mt-4">Nachname</label><input type="text" class="text-input" id="input-lastname" placeholder="Ihr Nachname...">
+            <div class="btn-group mt-4">
+              <button class="btn-primary-outline" onclick="prevStep()">Zurück</button>
+              <button class="btn-primary-full" onclick="nextStep()">Weiter</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-step" id="step-7" data-step="7">
+          <div class="step-content form-content">
+            <label class="input-label">Handynummer</label>
+            <div class="phone-input-group">
+              <select class="text-input select-input phone-prefix" id="input-phone-code">
+                <option value="+49">DE +49</option><option value="+43">AT +43</option><option value="+41">CH +41</option>
+              </select>
+              <input type="tel" class="text-input" id="input-phone" placeholder="0176 1234 567">
+            </div>
+            <label class="input-label mt-4">E-Mail</label><input type="email" class="text-input" id="input-email" placeholder="Ihre E-Mail-Adresse...">
+            <div class="btn-group mt-4">
+              <button class="btn-primary-outline" onclick="prevStep()">Zurück</button>
+              <button class="btn-primary-full" onclick="submitForm()">Absenden</button>
+            </div>
+          </div>
+        </div>
+        <div class="progress-container"><div class="progress-bar" id="progress-bar"><span id="progress-text">20%</span></div></div>
+      </div>
+    </div>
+    <script>
+      // Pure ES5 Standalone Fallback Modal Logic for direct file:// protocol support (no modern ES6/ES8 syntax to avoid any browser parse failures)
+      (function() {
+        var modal = document.getElementById('booking-modal');
+        if (!modal) return;
+
+        var currentStep = 1;
+        var totalSteps = 7;
+
+        window.openModal = function(e) {
+          if (e) e.preventDefault();
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+          currentStep = 1;
+          showStep(currentStep);
+        };
+
+        window.closeModal = function() {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        };
+
+        window.nextStep = function() {
+          if (currentStep < totalSteps) {
+            currentStep++;
+            showStep(currentStep);
+          }
+        };
+
+        window.prevStep = function() {
+          if (currentStep > 1) {
+            currentStep--;
+            showStep(currentStep);
+          }
+        };
+
+        window.selectOption = function(element, step) {
+          var siblings = element.parentElement.querySelectorAll('.selectable');
+          for (var i = 0; i < siblings.length; i++) {
+            siblings[i].classList.remove('selected');
+          }
+          element.classList.add('selected');
+          setTimeout(function() {
+            window.nextStep();
+          }, 400);
+        };
+
+        function showStep(stepIndex) {
+          var steps = document.querySelectorAll('.modal-step');
+          for (var i = 0; i < steps.length; i++) {
+            steps[i].classList.remove('active');
+          }
+          var activeStep = document.getElementById('step-' + stepIndex);
+          if (activeStep) activeStep.classList.add('active');
+
+          // Update progress
+          var percentage = Math.round((stepIndex / totalSteps) * 100);
+          var progressBar = document.getElementById('progress-bar');
+          var progressText = document.getElementById('progress-text');
+          if (progressBar) progressBar.style.width = percentage + '%';
+          if (progressText) progressText.textContent = percentage + '%';
+        }
+
+        window.submitForm = function() {
+          var selectedLocationEl = document.querySelector('#step-1 .selectable.selected');
+          var location = selectedLocationEl ? selectedLocationEl.innerText.replace(/\n/g, ', ').trim() : '';
+
+          var checkedServices = [];
+          var inputs = document.querySelectorAll('#step-2 .hidden-input');
+          for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].checked) {
+              var textEl = inputs[i].parentElement.querySelector('.list-text');
+              if (textEl) checkedServices.push(textEl.innerText);
+            }
+          }
+          var services = checkedServices.join(', ');
+
+          var selectedVehicleEl = document.querySelector('#step-3 .selectable.selected');
+          var vehicle = selectedVehicleEl ? selectedVehicleEl.innerText.trim() : '';
+
+          var selectedReasonEl = document.querySelector('#step-4 .selectable.selected');
+          var reason = selectedReasonEl ? selectedReasonEl.innerText.trim() : '';
+
+          var dateEl = document.getElementById('input-date');
+          var date = dateEl ? dateEl.value : '';
+
+          var licenseEl = document.getElementById('input-license');
+          var license_plate = licenseEl ? licenseEl.value : '';
+
+          var salutationEl = document.getElementById('input-salutation');
+          var salutation = salutationEl ? salutationEl.value : '';
+
+          var firstnameEl = document.getElementById('input-firstname');
+          var first_name = firstnameEl ? firstnameEl.value : '';
+
+          var lastnameEl = document.getElementById('input-lastname');
+          var last_name = lastnameEl ? lastnameEl.value : '';
+
+          var prefixEl = document.getElementById('input-phone-code');
+          var prefix = prefixEl ? prefixEl.value : '';
+
+          var phoneEl = document.getElementById('input-phone');
+          var phone_num = phoneEl ? phoneEl.value : '';
+
+          var emailEl = document.getElementById('input-email');
+          var email = emailEl ? emailEl.value : '';
+
+          var data = {
+            location: location,
+            services: services,
+            vehicle: vehicle,
+            reason: reason,
+            date: date,
+            license_plate: license_plate,
+            salutation: salutation,
+            first_name: first_name,
+            last_name: last_name,
+            phone: prefix + ' ' + phone_num,
+            email: email
+          };
+
+          console.log('Form Submit (Direct File mode):', data);
+          alert('Ihre Anfrage wurde erfolgreich gesendet! Wir melden uns in Kürze.');
+          window.closeModal();
+        };
+
+        // Delegation for click events
+        document.addEventListener('click', function(e) {
+          var trigger = e.target.closest('.trigger-booking');
+          if (trigger) {
+            window.openModal(e);
+          }
+          var closeBtn = e.target.closest('.modal-close');
+          if (closeBtn) {
+            window.closeModal();
+          }
+          if (e.target === modal) {
+            window.closeModal();
+          }
+        });
+      })();
+    </script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

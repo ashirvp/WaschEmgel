@@ -6,8 +6,12 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        automotive: resolve(__dirname, 'automotive.html'),
-        flight: resolve(__dirname, 'flight.html'),
+        aufbereitung: resolve(__dirname, 'aufbereitung.html'),
+        lackierarbeiten: resolve(__dirname, 'lackierarbeiten.html'),
+        leasing: resolve(__dirname, 'leasing.html'),
+        lederreparatur: resolve(__dirname, 'lederreparatur.html'),
+        ppf: resolve(__dirname, 'ppf.html'),
+        aviation: resolve(__dirname, 'aviation.html'),
         impressum: resolve(__dirname, 'impressum.html'),
       },
     },
