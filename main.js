@@ -10,11 +10,33 @@ gsap.registerPlugin(ScrollTrigger);
 const lenis = new Lenis({
   duration: 1.5,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  smooth: true,
+  smoothWheel: true, // correct stable v1.0+ parameter
   smoothTouch: false,
 });
 
 lenis.on('scroll', ScrollTrigger.update);
+
+// Hook up all anchor links starting with "#" for beautiful Lenis smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+    
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      e.preventDefault();
+      
+      // Calculate navbar height offset to avoid overlapping sections
+      const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 80;
+      
+      lenis.scrollTo(targetElement, {
+        offset: -navbarHeight,
+        duration: 1.6,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+      });
+    }
+  });
+});
 
 gsap.ticker.add((time) => {
   lenis.raf(time * 1000);
