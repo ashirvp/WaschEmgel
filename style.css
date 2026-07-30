@@ -854,9 +854,8 @@ h1, h2, h3, h4 {
   }
 
   .hero-bg {
-    height: 100% !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
+    height: 120% !important;
+    background-size: cover !important;
     background-position: center center !important;
   }
 
