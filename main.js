@@ -205,7 +205,59 @@ if (servicesSection && serviceGridItems.length > 0) {
   observer.observe(servicesSection);
 }
 
-// Navbar Blur Effect on Scroll
+// Mobile Navigation Drawer Toggle Handler
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+function openMobileMenu() {
+  if (navToggle) {
+    navToggle.classList.add('active');
+    navToggle.setAttribute('aria-expanded', 'true');
+  }
+  if (navLinks) navLinks.classList.add('active');
+  if (navbar) navbar.classList.add('mobile-menu-active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMobileMenu() {
+  if (navToggle) {
+    navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+  if (navLinks) navLinks.classList.remove('active');
+  if (navbar) navbar.classList.remove('mobile-menu-active');
+  document.body.style.overflow = '';
+}
+
+if (navToggle) {
+  navToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = navLinks && navLinks.classList.contains('active');
+    if (isOpen) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
+  });
+}
+
+// Close mobile menu when clicking any nav link
+if (navLinks) {
+  navLinks.querySelectorAll('a, button').forEach(link => {
+    link.addEventListener('click', () => {
+      closeMobileMenu();
+    });
+  });
+}
+
+// Close mobile menu on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && navLinks && navLinks.classList.contains('active')) {
+    closeMobileMenu();
+  }
+});
+
+// Navbar Background Effect on Scroll
 const navbar = document.querySelector('.navbar');
 if (navbar) {
   window.addEventListener('scroll', () => {
@@ -218,6 +270,7 @@ if (navbar) {
     }
   });
 }
+
 
 // --- Modal Logic ---
 let currentStep = 1;
