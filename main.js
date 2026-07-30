@@ -257,18 +257,41 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Navbar Background Effect on Scroll
+// Navbar Auto-Hide on Scroll (Mobile Smart Header)
 const navbar = document.querySelector('.navbar');
+let lastScrollY = window.scrollY;
+
 if (navbar) {
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > 50) {
       navbar.style.background = 'var(--primary-gold)';
       navbar.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.05)';
     } else {
       navbar.style.background = 'var(--primary-gold)';
       navbar.style.boxShadow = 'none';
     }
-  });
+
+    // Hide navbar when scrolling down on mobile viewports
+    if (window.innerWidth <= 992) {
+      const isMobileMenuOpen = navLinks && navLinks.classList.contains('active');
+
+      if (!isMobileMenuOpen && currentScrollY > 100) {
+        if (currentScrollY > lastScrollY + 5) {
+          navbar.classList.add('nav-hidden');
+        } else if (currentScrollY < lastScrollY - 5) {
+          navbar.classList.remove('nav-hidden');
+        }
+      } else {
+        navbar.classList.remove('nav-hidden');
+      }
+    } else {
+      navbar.classList.remove('nav-hidden');
+    }
+
+    lastScrollY = currentScrollY;
+  }, { passive: true });
 }
 
 
