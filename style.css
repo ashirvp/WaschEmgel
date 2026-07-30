@@ -264,6 +264,18 @@ h1, h2, h3, h4 {
   background-size: cover;
   background-position: center;
   z-index: 1;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
 }
 
 .hero-overlay {
